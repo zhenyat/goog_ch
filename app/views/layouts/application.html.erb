@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GoogCh</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', :media => 'all', 'data-turbolinks-track' => 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+    <%#= javascript_include_tag "https://www.google.com/jsapi" %> 
+    <%= include_gon %>
+    <%# if params['controller'] == 'pages' && params['action'] == 'candlesticks'%> 
+      <%#= yield :google_candlesticks_scripts %>
+    <%# end %>
+    
+    <%# if params['controller'] == 'pages' && params['action'] == 'candlesticks_combo'%> 
+      <%= yield :google_candlesticks_scripts %>
+    <%# end %>
+
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
